@@ -7,6 +7,8 @@ import '@/assets/style/global.less';
 
 import 'vant/lib/index.css';
 
+import 'uno.css';
+
 const app = createApp(App);
 
 app.use(createPinia());

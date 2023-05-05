@@ -3,6 +3,8 @@
 const { VantResolver } = require('unplugin-vue-components/resolvers');
 const ComponentsPlugin = require('unplugin-vue-components/webpack');
 
+const UnoCSS = require('@unocss/webpack').default;
+
 module.exports = {
 	publicPath: './',
 	outputDir: 'build',
@@ -14,9 +16,13 @@ module.exports = {
 	},
 	configureWebpack: {
 		plugins: [
+			UnoCSS(),
 			ComponentsPlugin({
 				resolvers: [VantResolver()],
 			}),
 		],
+		optimization: {
+			realContentHash: true,
+		},
 	},
 };
