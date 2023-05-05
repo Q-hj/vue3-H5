@@ -5,6 +5,8 @@ import { createPinia } from 'pinia';
 
 import '@/assets/style/global.less';
 
+import 'vant/lib/index.css';
+
 const app = createApp(App);
 
 app.use(createPinia());
