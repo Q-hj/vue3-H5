@@ -6,4 +6,8 @@
 	<RouterView />
 </template>
 
-<style lang="less" scoped></style>
+<style lang="less">
+	#app {
+		height: 100vh;
+	}
+</style>

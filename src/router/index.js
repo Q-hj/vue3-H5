@@ -21,14 +21,19 @@ const router = createRouter({
 			path: '/layout',
 			name: 'layout',
 			component: () => import('@/pages/layout/layout.vue'),
-			// redirect: "/home",
-			// children: [
-			// 	{
-			// 		path: '/home',
-			// 		name: '首页',
-			// 		component: () => import('@/pages/home/home.vue'),
-			// 	},
-			// ],
+			redirect: '/home',
+			children: [
+				{
+					path: '/home',
+					name: '首页',
+					component: () => import('@/pages/home/home.vue'),
+				},
+				{
+					path: '/user',
+					name: '我的',
+					component: () => import('@/pages/user/user.vue'),
+				},
+			],
 		},
 		// {
 		// 	path: '/404',
