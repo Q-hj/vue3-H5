@@ -41,7 +41,7 @@ devDependencies:
     version: 5.0.0(@vue/cli-service@5.0.1)(eslint@7.32.0)
   '@vue/cli-service':
     specifier: ~5.0.0
-    version: 5.0.1(@babel/core@7.12.16)(less-loader@11.1.0)(vue@3.2.13)
+    version: 5.0.1(@babel/core@7.12.16)(less-loader@8.1.1)(vue@3.2.13)
   eslint:
     specifier: ^7.32.0
     version: 7.32.0
@@ -49,8 +49,8 @@ devDependencies:
     specifier: ^8.0.3
     version: 8.0.3(eslint@7.32.0)
   less-loader:
-    specifier: ^11.1.0
-    version: 11.1.0(less@4.1.3)(webpack@5.82.0)
+    specifier: ^8.1.1
+    version: 8.1.1(less@3.13.1)(webpack@5.82.0)
   unocss:
     specifier: ^0.51.8
     version: 0.51.8(@unocss/webpack@0.51.8)(postcss@8.4.23)(vite@4.3.4)
@@ -2028,7 +2028,7 @@ packages:
       chokidar: 3.5.3
       fast-glob: 3.2.12
       magic-string: 0.30.0
-      vite: 4.3.4(less@4.1.3)
+      vite: 4.3.4(less@3.13.1)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -2229,7 +2229,7 @@ packages:
     dependencies:
       '@babel/core': 7.12.16
       '@vue/babel-preset-app': 5.0.8(@babel/core@7.12.16)(core-js@3.8.3)(vue@3.2.13)
-      '@vue/cli-service': 5.0.1(@babel/core@7.12.16)(less-loader@11.1.0)(vue@3.2.13)
+      '@vue/cli-service': 5.0.1(@babel/core@7.12.16)(less-loader@8.1.1)(vue@3.2.13)
       '@vue/cli-shared-utils': 5.0.8
       babel-loader: 8.3.0(@babel/core@7.12.16)(webpack@5.82.0)
       thread-loader: 3.0.4(webpack@5.82.0)
@@ -2251,7 +2251,7 @@ packages:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
       eslint: '>=7.5.0'
     dependencies:
-      '@vue/cli-service': 5.0.1(@babel/core@7.12.16)(less-loader@11.1.0)(vue@3.2.13)
+      '@vue/cli-service': 5.0.1(@babel/core@7.12.16)(less-loader@8.1.1)(vue@3.2.13)
       '@vue/cli-shared-utils': 5.0.8
       eslint: 7.32.0
       eslint-webpack-plugin: 3.2.0(eslint@7.32.0)(webpack@5.82.0)
@@ -2271,7 +2271,7 @@ packages:
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
     dependencies:
-      '@vue/cli-service': 5.0.1(@babel/core@7.12.16)(less-loader@11.1.0)(vue@3.2.13)
+      '@vue/cli-service': 5.0.1(@babel/core@7.12.16)(less-loader@8.1.1)(vue@3.2.13)
       '@vue/cli-shared-utils': 5.0.8
     transitivePeerDependencies:
       - encoding
@@ -2282,10 +2282,10 @@ packages:
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
     dependencies:
-      '@vue/cli-service': 5.0.1(@babel/core@7.12.16)(less-loader@11.1.0)(vue@3.2.13)
+      '@vue/cli-service': 5.0.1(@babel/core@7.12.16)(less-loader@8.1.1)(vue@3.2.13)
     dev: true
 
-  /@vue/cli-service@5.0.1(@babel/core@7.12.16)(less-loader@11.1.0)(vue@3.2.13):
+  /@vue/cli-service@5.0.1(@babel/core@7.12.16)(less-loader@8.1.1)(vue@3.2.13):
     resolution: {integrity: sha512-lhTW1d8waZv1VaRSvhE5pWWfkdmAgRTRSluDfyxkehZHMAWi//rd7a9zppN3k9Zr4X3oYVii+u7wR/RcTlr9cQ==}
     engines: {node: ^12.0.0 || >= 14.0.0}
     hasBin: true
@@ -2350,7 +2350,7 @@ packages:
       html-webpack-plugin: 5.5.1(webpack@5.82.0)
       is-file-esm: 1.0.0
       launch-editor-middleware: 2.6.0
-      less-loader: 11.1.0(less@4.1.3)(webpack@5.82.0)
+      less-loader: 8.1.1(less@3.13.1)(webpack@5.82.0)
       lodash.defaultsdeep: 4.6.1
       lodash.mapvalues: 4.6.0
       mini-css-extract-plugin: 2.7.5(webpack@5.82.0)
@@ -4864,14 +4864,6 @@ packages:
       safer-buffer: 2.1.2
     dev: true
 
-  /iconv-lite@0.6.3:
-    resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      safer-buffer: 2.1.2
-    dev: true
-    optional: true
-
   /icss-utils@5.1.0(postcss@8.4.23):
     resolution: {integrity: sha512-soFhflCVWLfRNOPU3iv5Z9VUdT44xFRbzjLsEzSr5AQmgqPMTHdU3PMT1Cf1ssx8fLNJDA1juftYl+PUcv3MqA==}
     engines: {node: ^10 || ^12 || >= 14}
@@ -5193,36 +5185,33 @@ packages:
       shell-quote: 1.8.1
     dev: true
 
-  /less-loader@11.1.0(less@4.1.3)(webpack@5.82.0):
-    resolution: {integrity: sha512-C+uDBV7kS7W5fJlUjq5mPBeBVhYpTIm5gB09APT9o3n/ILeaXVsiSFTbZpTJCJwQ/Crczfn3DmfQFwxYusWFug==}
-    engines: {node: '>= 14.15.0'}
+  /less-loader@8.1.1(less@3.13.1)(webpack@5.82.0):
+    resolution: {integrity: sha512-K93jJU7fi3n6rxVvzp8Cb88Uy9tcQKfHlkoezHwKILXhlNYiRQl4yowLIkQqmBXOH/5I8yoKiYeIf781HGkW9g==}
+    engines: {node: '>= 10.13.0'}
     peerDependencies:
       less: ^3.5.0 || ^4.0.0
       webpack: ^5.0.0
     dependencies:
       klona: 2.0.6
-      less: 4.1.3
+      less: 3.13.1
       webpack: 5.82.0
     dev: true
 
-  /less@4.1.3:
-    resolution: {integrity: sha512-w16Xk/Ta9Hhyei0Gpz9m7VS8F28nieJaL/VyShID7cYvP6IL5oHeL6p4TXSDJqZE/lNv0oJ2pGVjJsRkfwm5FA==}
+  /less@3.13.1:
+    resolution: {integrity: sha512-SwA1aQXGUvp+P5XdZslUOhhLnClSLIjWvJhmd+Vgib5BFIr9lMNlQwmwUNOjXThF/A0x+MCYYPeWEfeWiLRnTw==}
     engines: {node: '>=6'}
     hasBin: true
     dependencies:
       copy-anything: 2.0.6
-      parse-node-version: 1.0.1
-      tslib: 2.5.0
+      tslib: 1.14.1
     optionalDependencies:
       errno: 0.1.8
       graceful-fs: 4.2.11
       image-size: 0.5.5
       make-dir: 2.1.0
       mime: 1.6.0
-      needle: 3.2.0
+      native-request: 1.1.0
       source-map: 0.6.1
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /levn@0.4.1:
@@ -5556,23 +5545,15 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  /native-request@1.1.0:
+    resolution: {integrity: sha512-uZ5rQaeRn15XmpgE0xoPL8YWqcX90VtCFglYwAgkvKM5e8fog+vePLAhHxuuv/gRkrQxIeh5U3q9sMNUrENqWw==}
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
-
-  /needle@3.2.0:
-    resolution: {integrity: sha512-oUvzXnyLiVyVGoianLijF9O/RecZUf7TkBfimjGrLM4eQhXyeJwM6GeAWccwfQ9aa4gMCZKqhAOuLaMIcQxajQ==}
-    engines: {node: '>= 4.4.x'}
-    hasBin: true
-    requiresBuild: true
-    dependencies:
-      debug: 3.2.7
-      iconv-lite: 0.6.3
-      sax: 1.2.4
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-    optional: true
 
   /negotiator@0.6.3:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
@@ -5849,11 +5830,6 @@ packages:
       error-ex: 1.3.2
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
-    dev: true
-
-  /parse-node-version@1.0.1:
-    resolution: {integrity: sha512-3YHlOa/JgH6Mnpr05jP9eDG254US9ek25LyIxZlDItp2iJtwyaXQb57lBYLdT3MowkUFYEV2XXNAYIPlESvJlA==}
-    engines: {node: '>= 0.10'}
     dev: true
 
   /parse5-htmlparser2-tree-adapter@6.0.1:
@@ -6641,11 +6617,6 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /sax@1.2.4:
-    resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
-    dev: true
-    optional: true
-
   /schema-utils@2.7.1:
     resolution: {integrity: sha512-SHiNtMOUGWBQJwzISiVYKu82GiV4QYGePp3odlY1tuKO7gPtphAT5R/py0fA6xtbgLL/RvtJZnU9b8s0F1q0Xg==}
     engines: {node: '>= 8.9.0'}
@@ -7188,6 +7159,10 @@ packages:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
     dev: true
 
+  /tslib@1.14.1:
+    resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
+    dev: true
+
   /tslib@2.5.0:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
     dev: true
@@ -7403,7 +7378,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vite@4.3.4(less@4.1.3):
+  /vite@4.3.4(less@3.13.1):
     resolution: {integrity: sha512-f90aqGBoxSFxWph2b39ae2uHAxm5jFBBdnfueNxZAT1FTpM13ccFQExCaKbR2xFW5atowjleRniQ7onjJ22QEg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -7429,7 +7404,7 @@ packages:
         optional: true
     dependencies:
       esbuild: 0.17.18
-      less: 4.1.3
+      less: 3.13.1
       postcss: 8.4.23
       rollup: 3.21.5
     optionalDependencies:

@@ -1,6 +1,7 @@
 <script setup>
+	import { showFailToast, showToast } from 'vant';
 	import { useRouter } from 'vue-router';
-	// import { get } from '@/api/http/index';
+	import { get } from '@/api/http/index';
 	const router = useRouter();
 	const images = [
 		'https://szsb.hzxh.gov.cn:8080/backgroud/2022-07-28/46d1149a-1097-4658-aa48-7410258afb6f.png',
@@ -10,7 +11,12 @@
 	const replace = (path) => {
 		router.push(path);
 	};
-	// console.log(get('/CloudClass/getHealthy'));
+	get('/CloudClass/getHealthy', {}, '请求').then((e) => {
+		// showToast({
+		// 	message: 'This message will contain a incomprehensibilities long word.',
+		// 	wordBreak: 'break-word',
+		// });
+	});
 </script>
 
 <template>
