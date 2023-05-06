@@ -34,6 +34,11 @@ const router = createRouter({
 					component: () => import('@/pages/popularization/popularization.vue'),
 				},
 				{
+					path: '/zxDetail',
+					name: '科普详情',
+					component: () => import('@/pages/popularization/zxDetail.vue'),
+				},
+				{
 					path: '/user',
 					name: '我的',
 					redirect: '/building',
