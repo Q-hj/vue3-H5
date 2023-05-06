@@ -11,6 +11,14 @@ const request = axios.create({
 	baseURL: 'https://szsb.hzxh.gov.cn:8080/WxMini',
 	timeout: 1000 * 60 * 2,
 });
+// 将参数转成Body 表单格式
+const transformBody = (data) => {
+	let ret = '';
+	for (let it in data) {
+		ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&';
+	}
+	return ret.slice(0, -1);
+};
 
 // 发送请求前的统一处理。。。
 request.interceptors.request.use(
@@ -18,17 +26,16 @@ request.interceptors.request.use(
 		// console.log(config);
 
 		// 设置请求头
-		// request.headers.get['Content-Type'] = 'application/json'; //默认json格式
+		// config.headers.get['Content-Type'] = 'application/json'; //默认json格式
 
-		if (request.method == 'post' && request.url.includes('baidu')) {
-			request.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+		if (config.method == 'post') {
+			// config.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+			config.transformRequest = [transformBody];
 		}
 
 		// 请求头中添加token
 		const token = sessionStorage.getItem('token');
-		token && (request.headers['token'] = token);
-
-		// request.transformRequest = [];
+		token && (config.headers['token'] = token);
 
 		return config;
 	},
@@ -46,17 +53,17 @@ request.interceptors.response.use(
 		// 剖析：response（http响应）  -->  res（http响应体）  -->  data | result（后端接口结果）
 		const resContent = response.data;
 
-		const { code, result } = resContent; //解构后端返回内容
+		const { code, result, data } = resContent; //解构后端返回内容
 
 		// if (!res.code && !res.status) return res.data || res;
 
-		if (code === 200) Promise.resolve(result);
-		else return Promise.reject(resContent);
+		// if (code === 200) Promise.resolve(result);
+		// else return Promise.reject(resContent);
 
-		return resContent;
+		return data;
 	},
 	(error) => {
-		console.log(error);
+		// console.log(error);
 
 		const errorData = error.response?.data;
 		const errorText = errorData?.message || '请求超时';

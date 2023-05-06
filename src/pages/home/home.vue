@@ -1,7 +1,7 @@
 <script setup>
 	import { showFailToast, showToast } from 'vant';
+	import { get, post } from '@/api/http/index';
 	import { useRouter } from 'vue-router';
-	import { get } from '@/api/http/index';
 	const router = useRouter();
 	const images = [
 		'https://szsb.hzxh.gov.cn:8080/backgroud/2022-07-28/46d1149a-1097-4658-aa48-7410258afb6f.png',
@@ -11,12 +11,6 @@
 	const replace = (path) => {
 		router.push(path);
 	};
-	get('/CloudClass/getHealthy', {}, '请求').then((e) => {
-		// showToast({
-		// 	message: 'This message will contain a incomprehensibilities long word.',
-		// 	wordBreak: 'break-word',
-		// });
-	});
 </script>
 
 <template>
@@ -71,7 +65,7 @@
 			<p>线上科普</p>
 			<div class="content gap-20px">
 				<nav
-					@click="replace('building')"
+					@click="replace('popularization')"
 					class="w-100% relative"
 				>
 					<img

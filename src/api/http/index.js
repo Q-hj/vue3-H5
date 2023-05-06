@@ -41,7 +41,7 @@ const handleRequest = (method, url, params, word, loading) => {
 			data: ['post', 'put'].includes(method) ? params : undefined,
 		})
 			.then((result) => {
-				resolve(result.result?.list ?? result.result ?? result);
+				resolve(result.result?.list ?? result.result ?? result.records ?? result);
 				if (word) Message.success(word + '成功');
 			})
 			.catch((result) => {

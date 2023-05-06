@@ -29,6 +29,11 @@ const router = createRouter({
 					component: () => import('@/pages/home/home.vue'),
 				},
 				{
+					path: '/popularization',
+					name: '线上科普',
+					component: () => import('@/pages/popularization/popularization.vue'),
+				},
+				{
 					path: '/user',
 					name: '我的',
 					redirect: '/building',
