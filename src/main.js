@@ -3,11 +3,11 @@ import router from './router';
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 
-import '@/assets/style/global.less';
+import 'uno.css';
 
 import 'vant/lib/index.css';
 
-import 'uno.css';
+import '@/assets/style/global.less';
 
 const app = createApp(App);
 

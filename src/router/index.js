@@ -31,15 +31,16 @@ const router = createRouter({
 				{
 					path: '/user',
 					name: '我的',
+					redirect: '/building',
 					component: () => import('@/pages/user/user.vue'),
+				},
+				{
+					path: '/building',
+					name: '建设页',
+					component: () => import('@/pages/building/building.vue'),
 				},
 			],
 		},
-		// {
-		// 	path: '/404',
-		// 	name: '404',
-		// 	component: () => import('@/pages/error/404.vue'),
-		// },
 		{
 			// 匹配任意路由
 			path: '/:pathMatch(.*)*',

@@ -44,7 +44,10 @@ export default defineConfig({
 		'absolute-tr': 'absolute-rt',
 		'absolute-bl': 'absolute-lb',
 		'absolute-br': 'absolute-rb',
-		'absolute-center': 'absolute-lt flex-center wh-full',
+		// 绝对定位居中
+		'absolute-x-center': 'absolute  left-50% translate-x--50%',
+		'absolute-y-center': 'absolute  top-50% translate-y--50%',
+		'absolute-center': 'absolute-x-center absolute-y-center',
 
 		'fixed-lt': 'fixed left-0 top-0',
 		'fixed-lb': 'fixed left-0 bottom-0',
