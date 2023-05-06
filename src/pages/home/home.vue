@@ -16,11 +16,11 @@
 <template>
 	<section class="h-full">
 		<!-- 顶部留白 -->
-		<div class="w-full h-30px"></div>
+		<!-- <div class="w-full h-30px"></div> -->
 
 		<!-- 轮播 -->
 		<van-swipe
-			class="w-full !h-220px"
+			class="w-full !h-200px"
 			:autoplay="5000"
 			lazy-render
 		>
@@ -37,7 +37,7 @@
 
 		<div class="block">
 			<p>参观预约</p>
-			<div class="content gap-20px">
+			<div class="content gap-x-20px">
 				<nav
 					@click="replace('building')"
 					class="w-50% h-65px p-x-10px"
