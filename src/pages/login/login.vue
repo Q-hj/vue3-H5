@@ -1,15 +1,18 @@
 <script setup>
-	import { useGlobalStore } from '@/stores';
-	const { setOlderUI } = useGlobalStore();
-
 	import { useRouter } from 'vue-router';
 	const router = useRouter();
+
+	import { useGlobalStore, useAuthStore } from '@/stores';
+	const { setOlderUI } = useGlobalStore();
+	const { logged, setLogged } = useAuthStore();
 
 	ZWJSBridge.getUiStyle().then(({ uiStyle }) => {
 		// window.isOlder = uiStyle == 'elder';
 		setOlderUI(uiStyle == 'elder');
 		router.push('/home');
 	});
+	if (logged) ZWJSBridge.close(); //解决二次回退
+	setLogged(true);
 </script>
 
 <template>

@@ -40,10 +40,10 @@
 
 		<div class="block">
 			<p>参观预约</p>
-			<div class="content flex gap-15px flex-content-between">
+			<div class="content">
 				<nav
 					@click="replace('building')"
-					class="w-50% h-65px p-x-10px bg-amber"
+					class="w-50% h-65px p-x-10px"
 				>
 					<img
 						width="60"
@@ -52,10 +52,10 @@
 					/>
 					<p>个人预约</p>
 				</nav>
-				<!-- <nav style="width: 20px; opacity: 0"></nav> -->
+				<nav style="width: 20px; opacity: 0"></nav>
 				<nav
 					@click="replace('building')"
-					class="w-50% h-65px p-x-10px bg-amber"
+					class="w-50% h-65px p-x-10px"
 				>
 					<img
 						width="60"

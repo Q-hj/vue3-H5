@@ -8,14 +8,15 @@ import { defineStore } from 'pinia';
 export default defineStore(
 	'auth',
 	() => {
-		const currentPath = ref('');
-		function setCurrentPath(value) {
-			currentPath.value = value;
+		// 是否第一次进入应用，解决二次回退
+		const logged = ref(false);
+		function setLogged(value) {
+			logged.value = value;
 		}
 
 		return {
-			currentPath,
-			setCurrentPath,
+			logged,
+			setLogged,
 		};
 	},
 	{
