@@ -1,5 +1,6 @@
 <script setup>
-	import { showFailToast, showToast } from 'vant';
+	import { useGlobalStore } from '@/stores';
+	const { isOlderUI } = useGlobalStore();
 	import { get, post } from '@/api/http/index';
 	import { useRouter } from 'vue-router';
 	const router = useRouter();
@@ -11,6 +12,8 @@
 	const replace = (path) => {
 		router.push(path);
 	};
+
+	console.log('适老化版：' + isOlderUI);
 </script>
 
 <template>
@@ -37,10 +40,10 @@
 
 		<div class="block">
 			<p>参观预约</p>
-			<div class="content gap-x-20px">
+			<div class="content flex gap-15px flex-content-between">
 				<nav
 					@click="replace('building')"
-					class="w-50% h-65px p-x-10px"
+					class="w-50% h-65px p-x-10px bg-amber"
 				>
 					<img
 						width="60"
@@ -49,9 +52,10 @@
 					/>
 					<p>个人预约</p>
 				</nav>
+				<!-- <nav style="width: 20px; opacity: 0"></nav> -->
 				<nav
 					@click="replace('building')"
-					class="w-50% h-65px p-x-10px"
+					class="w-50% h-65px p-x-10px bg-amber"
 				>
 					<img
 						width="60"

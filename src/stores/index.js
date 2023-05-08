@@ -1,2 +1,4 @@
 import useAuthStore from './auth';
-export { useAuthStore };
+import useGlobalStore from './global';
+
+export { useAuthStore, useGlobalStore };

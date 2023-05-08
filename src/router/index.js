@@ -10,7 +10,7 @@ const router = createRouter({
 	routes: [
 		{
 			path: '',
-			redirect: '/layout',
+			redirect: '/login',
 		},
 		{
 			path: '/login',
@@ -64,7 +64,9 @@ const router = createRouter({
 router.beforeEach((to) => {
 	// const store = useAuthStore();
 	// console.log(to);
-	document.title = to.name;
+
+	// document.title = to.name;
+
 	NProgress.start();
 	// instead of having to check every route record with
 	// to.matched.some(record => record.meta.requiresAuth)

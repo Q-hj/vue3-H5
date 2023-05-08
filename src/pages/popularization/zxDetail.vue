@@ -4,10 +4,21 @@
 
 	const url = route.query.path;
 	console.log(url);
+	// window.open(url);
+	ZWJSBridge.openLink({
+		url,
+	})
+		.then((res) => {
+			console.log(res);
+		})
+		.catch((err) => {
+			console.log(err);
+		});
 </script>
 
 <template>
 	<iframe
+		class="full"
 		:src="url"
 		frameborder="0"
 	></iframe>

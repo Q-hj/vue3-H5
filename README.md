@@ -1,5 +1,15 @@
 # museum_zlb_vue3
 
+## 介绍
+
+vue 脚手架搭建的 vue3 项目
+
+## ✨ 插件和库
+
+- pinia
+
+- vant4
+
 ## Project setup
 
 ```
