@@ -6,12 +6,13 @@
 	const { setOlderUI } = useGlobalStore();
 	const { logged, setLogged } = useAuthStore();
 
-	ZWJSBridge.getUiStyle().then(({ uiStyle }) => {
+	ZWJSBridge?.getUiStyle().then(({ uiStyle }) => {
 		// window.isOlder = uiStyle == 'elder';
 		setOlderUI(uiStyle == 'elder');
 		router.push('/home');
 	});
-	if (logged) ZWJSBridge.close(); //解决二次回退
+	if (logged) ZWJSBridge?.close(); //解决二次回退
+
 	setLogged(true);
 </script>
 
