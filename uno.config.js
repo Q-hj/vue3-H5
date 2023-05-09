@@ -19,6 +19,7 @@ export default defineConfig({
 		'flex-col-center': 'flex-center flex-col',
 		'flex-x-between': 'flex justify-between',
 		'flex-x-around': 'flex justify-around',
+		'flex-around-center': 'flex-y-center justify-around',
 		'flex-x-end': 'flex justify-end',
 		'flex-x-center': 'flex justify-center',
 		'flex-y-center': 'flex items-center',

@@ -13,7 +13,11 @@
 		router.push(path);
 	};
 
-	console.log('适老化版：' + isOlderUI);
+	// console.log('适老化版：' + isOlderUI);
+
+	const hanldeClick = (i) => {
+		router.push(i === 2 ? 'popularization' : 'building');
+	};
 </script>
 
 <template>
@@ -38,7 +42,29 @@
 			</van-swipe-item>
 		</van-swipe>
 
-		<div class="block">
+		<div
+			v-if="isOlderUI"
+			class="p-30px"
+		>
+			<nav
+				@click="hanldeClick(i)"
+				class="bg-#67bdde p-20px flex-around-center rounded-20px mt-30px"
+				v-for="(item, i) in ['个人预约', '团队预约', '线上科普']"
+				:key="'nav' + i"
+			>
+				<img
+					class="w-60px"
+					:src="require(`@/assets/icons/home_nav_icon_${i + 1}.png`)"
+					alt=""
+				/>
+				<span class="text-white text-36px">{{ item }}</span>
+			</nav>
+		</div>
+
+		<div
+			v-else
+			class="block"
+		>
 			<p>参观预约</p>
 			<div class="content">
 				<nav
